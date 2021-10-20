@@ -1,0 +1,25 @@
+.container-flex{
+    display: flex;
+    flex-direction: row;
+}
+.container1{
+    text-align: center;
+    height: 150px;
+    background-color: #3FB6E0;
+}
+.container2{
+    text-align: center;
+    height: 150px;
+    background-color:#A7C526;
+}
+.container3{
+    text-align: center;
+    height: 150px;
+    background-color:#0B5ED7;
+}
+.appointment{
+    text-align: center;
+    height: 220px;
+    background-color: #3FB6E0;
+}
+

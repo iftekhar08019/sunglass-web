@@ -1,0 +1,29 @@
+.section-style1{
+    display: flex;
+    padding-top: 50px;
+    padding-bottom: 80px;
+}
+.section-element{
+    
+    width: 50%;
+    padding-left: 100px;
+    padding-right: 100px;
+
+}
+
+.section-element img{
+    float: right;
+    padding-top: 10px;
+}
+
+.heading-style{
+    font-size: 60px;
+    position: center;
+    font-weight: bolder;
+    padding-top: 100px;
+}
+.para-style{
+    text-align: justify;
+    font-size: 20px;
+    padding-bottom: 30px;
+}
