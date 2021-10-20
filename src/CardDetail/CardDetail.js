@@ -20,6 +20,7 @@ const CardDetail = () => {
           Make an Appointment
         </Link>
       </div>
+      
     </div>
   );
 };
