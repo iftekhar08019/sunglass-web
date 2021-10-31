@@ -1,6 +1,6 @@
 .footer {
   margin-top: 200px;
-  position: sticky;
+  position: relative;
   left: 0;
   bottom: 0;
   right: 0;

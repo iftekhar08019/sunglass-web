@@ -12,7 +12,7 @@ const Header = () => {
       <Navbar bg="dark" variant="dark" fixed="top">
         <Container>
           <Nav className="me-auto">
-            <Navbar.Brand to="/home">DENTARIO</Navbar.Brand>
+            <Navbar.Brand to="/home">Tourism Web</Navbar.Brand>
             <NavLink className="nav-style" to="/home">
               Home
             </NavLink>
@@ -22,13 +22,12 @@ const Header = () => {
             <NavLink className="nav-style" to="/gallery">
               Gallery
             </NavLink>
-            <NavLink className="nav-style" to="/appointment">
-              Appointment
-            </NavLink>
+            
 
-            <NavLink className="nav-style" to="/About">
-              About
-            </NavLink>
+            
+            {user.email ?  <NavLink className="nav-style" to="/orderOption">
+                Manage Booking
+              </NavLink> : '' }
           </Nav>
           <Nav>
             {user.email && (

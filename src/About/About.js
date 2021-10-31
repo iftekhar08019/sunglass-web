@@ -1,5 +1,4 @@
 import React from "react";
-import group from "../images/group.jpg";
 
 const About = () => {
   return (
@@ -8,7 +7,7 @@ const About = () => {
       <h1 className="middle">About The Clinic</h1>
       <div className="about">
         <div>
-          <img src={group} alt=""></img>
+          <img src='' alt=""></img>
         </div>
         <div>
           <h3>

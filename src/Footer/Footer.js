@@ -15,7 +15,7 @@ const Footer = () => {
       
       <Box>
         <h1 style={{ color: "blue", textAlign: "center", marginTop: "-50px" }}>
-          Dentario: A total Dental Solution
+          Tourism Web: The best Tour planner and Tour arranger online
         </h1>
         
       </Box>

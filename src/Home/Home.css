@@ -1,20 +1,28 @@
 .container-flex{
+    margin-top: 10px;
     display: flex;
     flex-direction: row;
+    column-gap: 30px;
+    align-items: center;
+    justify-content: center;
+
 }
 .container1{
     text-align: center;
     height: 150px;
     background-color: #3FB6E0;
+    padding: 15px;
 }
 .container2{
     text-align: center;
     height: 150px;
     background-color:#A7C526;
+    padding: 15px;
 }
 .container3{
     text-align: center;
     height: 150px;
+    padding: 15px;
     background-color:#0B5ED7;
 }
 .appointment{

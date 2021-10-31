@@ -6,13 +6,15 @@ import AuthProvider from "./context/AuthProvider";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import About from "./About/About";
 import Galleries from "./Galleries/Gallery";
-import Appointment from "./Appointment/Appointment";
 import Footer from "./Footer/Footer";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import Register from "./Register/Register";
 import Services from "./Services/Services";
 import NotFound from "./NotFound/NotFound";
 import CardDetail from "./CardDetail/CardDetail";
+import AddService from "./AddNewSerivces/AddService";
+import OrderOptions from "./OrderOptions/OrderOptions";
+import Allbookings from "./Allbooking/Allbookings";
 
 function App() {
   return (
@@ -35,8 +37,8 @@ function App() {
             <PrivateRoute path="/gallery">
               <Galleries></Galleries>
             </PrivateRoute>
-            <PrivateRoute path="/appointment">
-              <Appointment></Appointment>
+            <PrivateRoute path="/orderOption">
+              <OrderOptions></OrderOptions>
             </PrivateRoute>
             <Route path="/about">
               <About></About>
@@ -44,9 +46,14 @@ function App() {
             <Route path="/register">
               <Register></Register>
             </Route>
-            <PrivateRoute path="/details">
+            <PrivateRoute path="/details/:serviceId">
               <CardDetail></CardDetail>
             </PrivateRoute>
+            <PrivateRoute path="/allbooking">
+              <Allbookings></Allbookings>
+            </PrivateRoute>
+            <Route path="/addService">
+              <AddService></AddService></Route>
             <Route path="/*">
               <NotFound></NotFound>
             </Route>

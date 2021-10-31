@@ -1,26 +1,63 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { useForm } from "react-hook-form";
+
+import { useParams } from "react-router";
 import "./CardDetail.css";
 
 const CardDetail = () => {
+  const { serviceId } = useParams();
+  const [service, setService] = useState({});
+  const { register, handleSubmit, reset } = useForm();
+
+  const onSubmit = (data) => {
+    console.log(data);
+
+    axios
+      .post("https://creepy-shadow-70112.herokuapp.com/allbooking", data)
+      .then((res) => {
+        if (res.data.insertedId) {
+          alert("added successfully");
+          reset();
+        }
+      });
+  };
+
+  useEffect(() => {
+    fetch(`https://creepy-shadow-70112.herokuapp.com/services/${serviceId}`)
+      .then((res) => res.json())
+      .then((data) => setService(data));
+  }, []);
+
   return (
     <div className="section-element1">
       <div className="section-element">
-        <h1 className="heading-style">How to Protect Your Teeth</h1>
+        <img src={service.img} alt=""></img>
+        <h1 className="heading-style">{service.name}</h1>
+        <p className="para-style">{service.description}</p>
         <p className="para-style">
-          First and foremost, good oral hygiene starts with brushing several
-          times each day. By brushing, you not only protect your teeth by
-          removing any food particles or other harmful substances that can cause
-          tooth decay, but the teeth are also strengthened by providing them
-          with the mineral support they need. Be sure to brush the entire mouth,
-          not just the teeth, as bacteria can attack the gums and other
-          supporting tooth structures as well.
+          Total:
+          {service.price}
         </p>
-        <Link to="/appointment" className="btn btn-primary">
-          Make an Appointment
-        </Link>
       </div>
-      
+      <div className="add-service">
+        <h2>Please Write Your details</h2>
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <input
+            {...register("name", { required: true, maxLength: 20 })}
+            placeholder="Your Name"
+          />
+          <input {...register("email")} placeholder="Your Email" />
+          <input
+            type="number"
+            {...register("number")}
+            placeholder="Phone number"
+          />
+          <textarea {...register("adress")} placeholder="Address" />
+
+          <input type="Submit" />
+        </form>
+      </div>
     </div>
   );
 };

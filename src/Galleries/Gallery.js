@@ -4,22 +4,22 @@ import Gallery from "react-photo-gallery";
 const Galleries = () => {
   const photos = [
     {
-      src: "https://www.fortishealthcare.com/speciality_banner/mobile/Dental-Care.jpg",
+      src: "https://nomadparadise.com/wp-content/uploads/2021/04/bangladesh-places-01-1024x683.jpg",
       width: 1,
       height: 1,
     },
     {
-      src: "https://kdahweb-static.kokilabenhospital.com/kdah-2019/slider/15799744911957.jpg",
+      src: "https://lifebeyondnumbers.b-cdn.net/wp-content/uploads/2017/05/must-visit-places-bangladesh.png",
       width: 1,
       height: 1,
     },
     {
-      src: "https://www.gleneaglesglobalhospitals.com/images/specalities/dentistry/best-hospitals-root-canal-treatment-2.jpg",
+      src: "https://i.ytimg.com/vi/KXg2AaWO7oM/maxresdefault.jpg",
       width: 1,
       height: 1,
     },
     {
-      src: "https://thesteindentalgroup.com/wp-content/uploads/2020/05/Example-Image-compressor.jpg",
+      src: "https://blog.flyticket.com.bd/wp-content/uploads/2020/05/image005-1024x684.jpg",
       width: 1,
       height: 1,
     },
