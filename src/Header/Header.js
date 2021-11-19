@@ -7,27 +7,33 @@ import "./Header.css";
 
 const Header = () => {
   const { user, logOut } = useAuth();
+  const { admin } = useAuth();
   return (
     <div>
       <Navbar bg="dark" variant="dark" fixed="top">
         <Container>
           <Nav className="me-auto">
-            <Navbar.Brand to="/home">Tourism Web</Navbar.Brand>
+            <Navbar.Brand to="/home">Sunglass Web</Navbar.Brand>
             <NavLink className="nav-style" to="/home">
               Home
             </NavLink>
             <NavLink className="nav-style" to="/services">
-              Services
+              Eyewears
             </NavLink>
-            <NavLink className="nav-style" to="/gallery">
-              Gallery
-            </NavLink>
-            
-
-            
-            {user.email ?  <NavLink className="nav-style" to="/orderOption">
-                Manage Booking
-              </NavLink> : '' }
+            {(user.email && !admin) ? (
+              <NavLink className="nav-style" to="/dashboardUser">
+                Dashboard User
+              </NavLink>
+            ) : (
+              ""
+            )}
+            {(user.email && admin)? (
+              <NavLink className="nav-style" to="/dashboardAdmin">
+                Dashboard Admin
+              </NavLink>
+            ) : (
+              ""
+            )}
           </Nav>
           <Nav>
             {user.email && (

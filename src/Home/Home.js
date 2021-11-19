@@ -4,77 +4,78 @@ import a from "../images/a.jpg";
 import b from "../images/b.jpg";
 import c from "../images/c.jpg";
 import "./Home.css";
-import Services from "../Services/Services";
-import { Link } from "react-router-dom";
+import Eyewears from "./Eyewears/Eyewears";
+import Reviews from "./Review/Reviews";
 
 const Home = () => {
   return (
     <div>
-      <Carousel fade variant="dark">
-        <Carousel.Item>
-          <img className="d-block w-25" src={a} alt="First slide" />
-          <Carousel.Caption>
-            <h3>Welcome to Tourism Web</h3>
-            <p>Take a day trip to your favorite destination</p>
+      <Carousel>
+        <Carousel.Item interval={1000}>
+          <img className="d-block w-100" src={a} alt="First slide" />
+          <Carousel.Caption className="text-black">
+            <h3>A BROAD RANGE OF TRENDY EYEWEAR </h3>
+            <p>
+              Perfect look with a suitable pair of glasses. Put on eyewear & put
+              on positive view mode.
+            </p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item interval={500}>
+          <img className="d-block w-100" src={b} alt="Second slide" />
+          <Carousel.Caption className="text-black">
+            <h3>A BROAD RANGE OF TRENDY EYEWEAR </h3>
+            <p>
+              Perfect look with a suitable pair of glasses. Put on eyewear & put
+              on positive view mode.
+            </p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img className="d-block w-25" src={b} alt="Second slide" />
-
-          <Carousel.Caption>
-            <h3>Welcome to Tourism Web</h3>
-            <p>Go alone, with friends or family to the most beautiful places</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img className="d-block w-25" src={c} alt="Third slide" />
-
-          <Carousel.Caption>
-            <h3>Welcome to Tourism Web</h3>
-            <p>We provide the best services with best price</p>
+          <img className="d-block w-100" src={c} alt="Third slide" />
+          <Carousel.Caption className="text-black">
+            <h3>A BROAD RANGE OF TRENDY EYEWEAR </h3>
+            <p>
+              Perfect look with a suitable pair of glasses. Put on eyewear & put
+              on positive view mode.
+            </p>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
       <div className="container-flex">
         <div className="container1">
-          <h3>Tour Alone</h3>
-          <p>Here we give you the opportunity to go anywhere with us alone.</p>
+          <h3>Sunglasses for Man</h3>
+          <p>Here we give you the best sunglasses choice for men.</p>
         </div>
         <div className="container2">
-          <h3>Take a break</h3>
+          <h3>Uni-sex Sunglasses</h3>
           <p>
-            Take a break from your daily schedule to go and relax to the
-            beautiful places
+          Here we give you the best sunglasses choice for uni-sex sunglasses.
           </p>
         </div>
         <div className="container3">
-          <h3>Tour Cheap</h3>
-          <p>Here you will find the best prices. Experience the best service within range.</p>
+          <h3>Sunglasses for Woman</h3>
+          <p>
+          Here we give you the best sunglasses choice for women.
+          </p>
         </div>
       </div>
       <br></br>
       <br></br>
-      <h1>Our Services</h1>
+      <h1>Our Eyewears</h1>
       <hr></hr>
-      <Services></Services>
+      <Eyewears></Eyewears>
+      <br></br>
+      <br></br>
+      <h1>Customer Reviews</h1>
+      <hr></hr>
+      <Reviews></Reviews>
       <br></br>
       <br></br>
       <br></br>
       <br></br>
       <br></br>
       <br></br>
-      <br></br>
-      <br></br>
-
-      <div className="appointment">
-        <h1 style={{ padding: "20px" }}>
-          Best Tourism Website Around
-        </h1>
-        <p>Make Your Booking or call 8 800 254 25 64</p>
-        <Link to="/services" className="btn btn-primary">
-          Book Now
-        </Link>
-      </div>
     </div>
   );
 };

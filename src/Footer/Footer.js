@@ -15,7 +15,7 @@ const Footer = () => {
       
       <Box>
         <h1 style={{ color: "blue", textAlign: "center", marginTop: "-50px" }}>
-          Tourism Web: The best Tour planner and Tour arranger online
+          Sunglass Web: All the Sunglasses you need
         </h1>
         
       </Box>

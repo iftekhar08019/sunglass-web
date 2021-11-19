@@ -1,8 +1,0 @@
-.about{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-.middle{
-    text-align: center;
-}

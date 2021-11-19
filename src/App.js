@@ -4,8 +4,6 @@ import Header from "./Header/Header";
 import "bootstrap/dist/css/bootstrap.min.css";
 import AuthProvider from "./context/AuthProvider";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import About from "./About/About";
-import Galleries from "./Galleries/Gallery";
 import Footer from "./Footer/Footer";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import Register from "./Register/Register";
@@ -13,8 +11,12 @@ import Services from "./Services/Services";
 import NotFound from "./NotFound/NotFound";
 import CardDetail from "./CardDetail/CardDetail";
 import AddService from "./AddNewSerivces/AddService";
-import OrderOptions from "./OrderOptions/OrderOptions";
 import Allbookings from "./Allbooking/Allbookings";
+import DashboardUser from "./DashboardUser/DashboardUser";
+import AddReview from "./DashboardUser/AddReview/AddReview";
+import MakeAdmin from "./DashboardAdmin/MakeAdmin";
+import Payment from "./DashboardUser/Payment";
+import DashboardAdmin from "./DashboardAdmin/DashboardAdmin";
 
 function App() {
   return (
@@ -30,19 +32,13 @@ function App() {
               <Home></Home>
             </Route>
             <Route path="/services">
-              <h1>Our Services</h1>
+              <h1>Our Eyewears</h1>
               <hr></hr>
               <Services></Services>
             </Route>
-            <PrivateRoute path="/gallery">
-              <Galleries></Galleries>
+            <PrivateRoute path="/dashboardUser">
+              <DashboardUser></DashboardUser>
             </PrivateRoute>
-            <PrivateRoute path="/orderOption">
-              <OrderOptions></OrderOptions>
-            </PrivateRoute>
-            <Route path="/about">
-              <About></About>
-            </Route>
             <Route path="/register">
               <Register></Register>
             </Route>
@@ -52,8 +48,21 @@ function App() {
             <PrivateRoute path="/allbooking">
               <Allbookings></Allbookings>
             </PrivateRoute>
-            <Route path="/addService">
-              <AddService></AddService></Route>
+            <PrivateRoute path="/makeAdmin">
+              <MakeAdmin></MakeAdmin>
+            </PrivateRoute>
+            <PrivateRoute path="/newReviews">
+              <AddReview></AddReview>
+            </PrivateRoute>
+            <PrivateRoute path="/addServices">
+              <AddService></AddService>
+            </PrivateRoute>
+            <PrivateRoute path="/payment">
+              <Payment></Payment>
+            </PrivateRoute>
+            <PrivateRoute path="/dashboardAdmin">
+              <DashboardAdmin></DashboardAdmin>
+            </PrivateRoute>
             <Route path="/*">
               <NotFound></NotFound>
             </Route>

@@ -13,11 +13,10 @@ initializeAuthentication();
 const useFirebase = () => {
   const [user, setUser] = useState({});
   const [loading, setLoading] = useState(true);
+  const [admin, setAdmin] = useState(false);
 
   const auth = getAuth();
   const googleProvider = new GoogleAuthProvider();
-
-  
 
   const signInUsingGoogle = () => {
     return signInWithPopup(auth, googleProvider).finally(() => {
@@ -46,10 +45,16 @@ const useFirebase = () => {
     });
     return () => unsubscribe;
   }, []);
+  useEffect(() => {
+    fetch(`https://creepy-shadow-70112.herokuapp.com/users/${user.email}`)
+      .then((res) => res.json())
+      .then((data) => setAdmin(data.admin));
+  }, [user.email]);
 
   return {
     user,
     loading,
+    admin,
     signInUsingGoogle,
     logOut,
   };
